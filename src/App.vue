@@ -17,6 +17,9 @@ interface Player {
   currentDifficulty: number;
   oakLogs: number;
   ironOre: number;
+  ownsIronHatchet: boolean;
+  ownsIronPickaxe: boolean;
+  ownsIronSword: boolean;
 }
 
 interface Enemy {
@@ -59,7 +62,10 @@ const player = ref<Player>({
   isCombatActive: false,
   currentDifficulty: 1,
   oakLogs: 0,
-  ironOre: 0
+  ironOre: 0,
+  ownsIronHatchet: false,
+  ownsIronPickaxe: false,
+  ownsIronSword: false
 })
 
 const enemy = ref<Enemy>({
